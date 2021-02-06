@@ -1,0 +1,52 @@
+a {
+   text-decoration: none;
+}
+nav {
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 20px;
+}
+ul {
+   background: darkorange;
+   list-style: none;
+   margin: 0;
+   padding-left: 0;
+}
+
+li {
+   background: darkorange;
+   float: left;
+   padding: 15px;
+   position: relative;
+   text-decoration: none;
+   display: block;
+   transition-duration: 0.5s;
+}
+li a {
+   color: darkslategray;
+}
+li:hover {
+   background: coral;
+   cursor: pointer;
+}
+
+ul li ul {
+   visibility: hidden;
+   opacity: 0;
+   max-width: 5rem;
+   position: absolute;
+   transition: all 0.5s ease;
+   margin-top: 30px;
+   left: 0;
+   display: none;
+}
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover {
+   visibility: visible;
+   opacity: 1;
+   display: inline;
+}
+ul li ul li {
+   clear: both;
+   width: 100%;
+}
